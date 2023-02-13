@@ -4,15 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/2f1b119233.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header></header>
-        <main></main>
+    
+    
+        <header>
+            <h1>Logo</h1>
+        </header>
+
+
+        <main>
+
+<!--  Huvud container -->
+            <div class="container">
+
+<!-- Container för allt som ska visas på huvuddelen: stad, dag, tid, icon för vädret, grader  -->
+                <div class="displayed-info">
+
+                    <div class="city">Stad</div>
+
+                    <div class="day-time">Tuesday,
+                        <span class="time" id="time">11:00</span>
+                    </div>
+
+                    <div class="current-weather-icon"><i class="fa-regular fa-sun"></i></div>
+
+                    <div class="current-temperature">20°C</div>
+                </div>
+            </div>
+
+
+   <!-- Container för alla extra info som ska visas- wind, pressure, humidity till exepel -->
+
+            <div class="extra-info-container">
+
+                
+                    <div class="wind">Wind Speed 4 m/s</div>
+
+                    <div class="pressure">Pressure 1028 hPa</div>
+
+                    <div class="humidity">Humidity 74%</div>
+            </div> 
+
+    <!-- Container för extra text (funny text) som ska visas på sidan -->
+            <div class="text-container">
+                <p id="information-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum justo at ultricies scelerisque. Maecenas pretium ligula in risus porttitor condimentum ut non velit. Fusce ex mi, dapibus in luctus in, pharetra at tortor. Mauris malesuada, quam eget tempus auctor, sem mi consectetur nisi, in finibus libero dui egestas augue. Donec neque nibh, suscipit sed pharetra finibus, faucibus non orci. Praesent ut viverra tellus, id consequat justo.
+                </p>
+            </div>
+        </main>
+
+
+
+
         <footer></footer>
-    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
