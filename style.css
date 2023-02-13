@@ -1,0 +1,23 @@
+.wrapper {
+    width: 100vw;
+}
+
+.footer {
+    width: inherit;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 5em;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:inherit;
+}
+
+.footer__wrapper > a, a:visited {
+    text-decoration: none;
+    color: black;
+}
