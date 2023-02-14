@@ -93,10 +93,6 @@ text-align: center;
     height:inherit;
 }
 
-#information-text {
-width: 60%;
-text-align: center;
-}
 .footer__wrapper > a, a:visited {
     text-decoration: none;
     color: black;
