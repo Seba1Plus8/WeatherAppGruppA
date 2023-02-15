@@ -14,10 +14,87 @@ body:not(.dark-mode) {
 /* --------------------- */
 .wrapper {
     width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header h1 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.displayed-info {
+    background: rgb(52, 65, 92);
+    opacity: 0.7;
+    padding: 20px;
+   border-radius: 30px;
+   width: 50%;
+}
+
+.city {
+    font-size: 40px;
+    padding: 10px;
+}
+
+.day-time {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.current-weather-icon {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.current-temperature {
+    font-size: 16px;
+}
+
+.extra-info-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 100px;
+}
+
+.wind, .pressure, .humidity {
+    background: rgb(52, 65, 92);
+    opacity: 0.7;
+    padding: 20px;
+   border-radius: 10px;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+#information-text {
+width: 60%;
+text-align: center;
 }
 
 .footer {
-    width: inherit;
+    width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
