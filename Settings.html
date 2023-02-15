@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/2f1b119233.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="onload()">
     <div class="wrapper">
         <header>
             <h1>LOGO</h1>
@@ -24,7 +24,7 @@
                     <div id="checkbox-toggle">
                         <p>Darkmode</p>
                         <label class="switch">
-                        <input type="checkbox">
+                        <input onclick="darkmode()" type="checkbox">
                         <span class="slider round"></span>
                         </label>
                     </div>
