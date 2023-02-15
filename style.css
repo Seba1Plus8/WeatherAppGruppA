@@ -1,4 +1,19 @@
-* {
+/* ------ DARKMODE ------ */
+body {
+  background-color: var(background-color);
+}
+body:not(.dark-mode) {
+  background-color: white;
+  color: rgb(136, 136, 136);
+}
+
+.dark-mode {
+  background-color: rgb(160, 160, 160);
+  color: rgb(255, 255, 255);
+}
+/* --------------------- */
+.wrapper {
+    width: 100vw;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
