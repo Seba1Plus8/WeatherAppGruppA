@@ -101,21 +101,35 @@ text-align: center;
 
 /* ------------Style for settings page------------*/
 
+.logotype {
+  text-decoration: none;
+}
+
 main  {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .all-toggles {
-    background: rgb(235, 235, 235);
     font-size: 18px;
+    padding: 15px;
 }
 
 .eachDiv {
-    border-bottom: rgb(190, 190, 190) solid 2px;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 3px;
+    margin: 3px;
+    padding: 5px;
 }
 
 h2 {
     font-size: 25px;
+    padding: 10px;
+    padding-left: 20px;
+    color: rgb(0, 0, 0);
+}
+
+p {
+  color: black;
 }
 
 .radio-toggle {
@@ -130,6 +144,15 @@ h2 {
     width: 18px;
     height: 18px;
     display: inline;
+    color: black;
+}
+
+.aboutService {
+  width: 350px;
+}
+
+.aboutTxt {
+  padding-left: 20px;
 }
 
 #tempatureUnit p {
@@ -162,7 +185,7 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: rgb(255, 255, 255);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -174,7 +197,7 @@ h2 {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: hsl(0, 0%, 90%);
     -webkit-transition: .4s;
     transition: .4s;
   }
