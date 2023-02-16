@@ -7,8 +7,14 @@ function darkmode() {
     element.classList.toggle('dark-mode', !wasDarkmode);
  }
  
- function onload() {
-    document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
- }
+ 
+//  function onload() {
+    const wasDarkmode = localStorage.getItem('darkmode') === 'true';
+    document.body.classList.toggle('dark-mode', wasDarkmode);
+    const toggle = document.getElementById ('darkmode-toggle')
+    if (toggle && wasDarkmode) {
+        toggle.setAttribute('checked', true);
+    }
+//  }
 
  /* -------------------- */ 
