@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body onload="onload()">
+<body>
     <div class="wrapper">
         <header>
             
@@ -28,7 +28,7 @@
                     <div id="checkbox-toggle">
                         <p>Darkmode</p>
                         <label class="switch">
-                        <input onclick="darkmode()" type="checkbox">
+                        <input onclick="darkmode()" id="darkmode-toggle" type="checkbox">
                         <span class="slider round"></span>
                         </label>
                     </div>
@@ -43,12 +43,12 @@
     
                     <div>
                     <input type="radio" class="radio">
-                    <label for="" class="radio">Celsius</label>
+                    <label for="" class="radio">Celsius (°C)</label>
                     </div> 
     
                     <div>
                     <input type="radio" class="radio">
-                    <label for="" class="radio">Fahrenheit</label>
+                    <label for="" class="radio">Fahrenheit (°F)</label>
                     </div>
     
                     </div>

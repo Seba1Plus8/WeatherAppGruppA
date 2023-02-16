@@ -1,31 +1,26 @@
-/* ------ DARKMODE ------ */
-body {
-  background-color: var(background-color);
-}
-body:not(.dark-mode) {
-  background-color: white;
-  color: rgb(136, 136, 136);
-}
-
-.dark-mode {
-  background-color: rgb(160, 160, 160);
-  color: rgb(255, 255, 255);
-}
-/* --------------------- */
 .wrapper {
     width: 100vw;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
 }
 
 body{
-    background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
     background-size: cover;
     height: 100vh;
     background-position: center;
     background-attachment: fixed;
+    background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+    color: black;
+  }
+
+.dark-mode {
+  background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+  color: white;
+}
+
+.dark-mode .eachDiv {
+  background-color: rgba(41, 40, 40, 0.521);
 }
 
 header h1 {
@@ -45,8 +40,8 @@ header h1 {
     background: rgb(52, 65, 92);
     opacity: 0.7;
     padding: 20px;
-   border-radius: 30px;
-   width: 50%;
+    border-radius: 30px;
+    width: 50%;
 }
 
 .city {
@@ -130,21 +125,16 @@ main  {
 }
 
 .eachDiv {
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 3px;
-    margin: 3px;
-    padding: 5px;
+  background-color: rgba(255, 255, 255, 0.521);
+  border-radius: 3px;
+  margin: 3px;
+  padding: 5px;
 }
 
 h2 {
     font-size: 25px;
     padding: 10px;
     padding-left: 20px;
-    color: rgb(0, 0, 0);
-}
-
-p {
-  color: black;
 }
 
 .radio-toggle {
@@ -159,7 +149,6 @@ p {
     width: 18px;
     height: 18px;
     display: inline;
-    color: black;
 }
 
 .aboutService {
