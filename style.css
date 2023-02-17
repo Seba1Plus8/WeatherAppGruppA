@@ -231,7 +231,7 @@ h2 {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: hsl(0, 0%, 90%);
+    background: linear-gradient(180deg,#ffffff,#cdcac4);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -241,7 +241,7 @@ h2 {
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    background: linear-gradient(180deg,#ffffff,#cdcac4);
   }
   
   input:checked + .slider:before {
