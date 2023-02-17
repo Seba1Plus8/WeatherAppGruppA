@@ -6,12 +6,13 @@
 }
 
 body{
-    background-size: cover;
-    height: 100vh;
-    background-position: center;
-    background-attachment: fixed;
-    background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
-    color: black;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+  color: black;
   }
 
 .dark-mode {
@@ -113,10 +114,6 @@ text-align: center;
 
 .logotype {
   text-decoration: none;
-}
-
-main  {
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .all-toggles {
