@@ -177,12 +177,15 @@ h2 {
 
 .favourites-header
 {
-
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .search-header
 {
-  
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* ----Styling på toggle---- */ 

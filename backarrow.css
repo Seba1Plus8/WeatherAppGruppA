@@ -4,7 +4,7 @@ body
     padding: 0;
 }
 
-.backarrow 
+.backarrow-settings
 {
     display: flex;
     justify-content: top;
@@ -13,6 +13,14 @@ body
     left: 2%;
     margin-right: 30%;
     
+}
+.backarrow
+{
+    display: flex;
+    justify-content: top;
+    align-items: left; 
+    flex-direction: column;
+    margin-right: auto;
 }
 
 .arr 
