@@ -21,7 +21,23 @@ body{
 }
 
 .dark-mode .eachDiv {
-  background-color: rgba(41, 40, 40, 0.521);
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+.dark-mode .displayed-info {
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+.dark-mode .wind {
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+.dark-mode .pressure {
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+.dark-mode .humidity {
+  background-color: rgba(0, 0, 0, 0.521);
 }
 
 header h1 {
@@ -38,11 +54,11 @@ header h1 {
 }
 
 .displayed-info {
-    background: rgb(52, 65, 92);
-    opacity: 0.7;
-    padding: 20px;
-    border-radius: 30px;
-    width: 50%;
+  background-color: rgba(255, 255, 255, 0.521);
+  opacity: 0.7;
+  padding: 20px;
+  border-radius: 30px;
+  width: 50%;
 }
 
 .city {
@@ -72,9 +88,9 @@ header h1 {
 }
 
 .wind, .pressure, .humidity {
-    background: rgb(52, 65, 92);
-    opacity: 0.7;
-    padding: 20px;
+  background-color: rgba(255, 255, 255, 0.521);
+  opacity: 0.7;
+  padding: 20px;
    border-radius: 10px;
 }
 
@@ -111,10 +127,6 @@ text-align: center;
 
 
 /* ------------Style for settings page------------*/
-
-.logotype {
-  text-decoration: none;
-}
 
 .all-toggles {
     font-size: 18px;
