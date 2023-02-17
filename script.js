@@ -99,7 +99,6 @@ function darkmode() {
     }
  }
  /* -------------------- */ 
-//  }
 
  /* --------If sats for funny text --------- */ 
 
