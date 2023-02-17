@@ -259,3 +259,18 @@ h2 {
     border-radius: 50%;
   }
   /* ----------------- */ 
+
+  .star-icon {
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+    
+}
+.star-icon:before {
+    content: '\2606';
+    color: white;
+}
+.star-icon.marked:before {
+    content: '\2605';
+    color: gold;
+}
