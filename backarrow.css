@@ -1,0 +1,33 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.backarrow 
+{
+    height: 100vh;
+    display: flex;
+    justify-content: top;
+    align-items: left; 
+    flex-direction: column;
+}
+
+.arr 
+{
+    position: absolute;
+    background: #ffffff00;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 4%;
+    left: 3%;
+    transform: translate(-50%);
+    transition: .4s ease;
+}
+
+.arr:hover
+{
+    box-shadow: 0 0 10px 10px rgba(119, 119, 119, 0.283);
+}
+
