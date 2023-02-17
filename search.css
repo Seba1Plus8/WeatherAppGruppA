@@ -1,18 +1,17 @@
-body {
+body 
+{
      margin: 0;
      padding: 0;
      
 }
 
-
-
 .box
 {
     position: absolute;
-    left: 50%;
+    left: 64%;
     top: 4%;
     transform: translate(-50%);
-    width: 500px;
+    width: 300px;
 }
 
 input
@@ -27,7 +26,7 @@ input
 input[type="text"]
 {
     background: #fff;
-    width: 340px;
+    width: 200px;
     height: 40px;
     border: none;
     outline: none;
@@ -38,9 +37,9 @@ input[type="submit"]
 {
     position: relative;
     left: -5px;
-    border-radius:  0 25px 25px 0;
+    border-radius: 0 25px 25px 0;
     height: 40px;
-    width: 150px;
+    width: 80px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -52,3 +51,11 @@ input[type="submit"]:hover
 {
     background: #5a5a5a;
 }
+/* 
+input[type="submit"]::after
+{
+    content: "\f002";
+    font-family: "Font Awesome 6 Free";
+    font-size: 2rem;
+    display: block;
+} */
