@@ -187,15 +187,18 @@ h2 {
   align-items: center;
 }
 
-/* .favourites-header
+.favourites-header
 {
-
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .search-header
 {
-  
-} */
+  display: flex;
+  justify-content: space-evenly;
+}
 
 /* ----Styling på toggle---- */ 
 .switch {
