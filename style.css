@@ -130,8 +130,9 @@ text-align: center;
 
 h2 {
     font-size: 25px;
-    padding: 10px;
-    padding-left: 20px;
+    padding: 5px;
+    padding-left: 20px;    
+    text-align: center;
 }
 
 .radio-toggle {

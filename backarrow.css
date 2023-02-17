@@ -6,7 +6,7 @@ body
 
 .backarrow 
 {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: top;
     align-items: left; 
