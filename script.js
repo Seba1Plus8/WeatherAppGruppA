@@ -19,9 +19,50 @@ async function getWeatherData(latitudes, longitudes) {
   
   getWeatherData(latitudes, longitudes).then((weatherData) => {
     console.log(weatherData);
+    showCurrentTemp()
   });
 
+ /* -------- Temperature converter --------- */ 
 
+ const tempButtons = document.querySelectorAll('input[name="temp-setting"]');
+
+ for(const tempButton of tempButtons){
+    tempButton.addEventListener('change', showSelected);
+}     
+
+    function showSelected(e) {
+        if (this.checked) {
+        if (this.value === "fahrenheit") {
+            console.log("Fahrenheit selected");
+            localStorage.setItem("tempUnit", "fahrenheit")
+             convertToC();
+        } else if (this.value === "celsius") {
+            console.log("Celsius selected");
+            localStorage.setItem("tempUnit", "celsius")
+             convertToF();
+        }
+        }
+    }
+
+    function showCurrentTemp() {
+        const tempUnit = localStorage.getItem("tempUnit")
+        if (tempUnit === 'fahrenheit') {
+            convertToF();
+     }
+    }
+    function convertToC() {
+        const temperatureSpan = document.getElementById("temp-span");
+        const fahrenheit = parseFloat(temperatureSpan.textContent);
+        const celsius = (fahrenheit - 32) * 5/9;
+        temperatureSpan.textContent = celsius.toFixed(2) + "°C";
+      }
+      
+      function convertToF() {
+        const temperatureSpan = document.getElementById("temp-span");
+        const celsius = parseFloat(temperatureSpan.textContent);
+        const fahrenheit = (celsius * 9/5) + 32;
+        temperatureSpan.textContent = fahrenheit.toFixed(2) + "°F";
+      }
 
 //Set current Time, date, month 
 let currentDay= document.getElementById("day");
@@ -119,6 +160,9 @@ if (tempNum>=20){
 }
 
 console.log(tempNum)
+
+
+
 
 
 
