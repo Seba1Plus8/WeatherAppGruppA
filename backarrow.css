@@ -6,22 +6,21 @@ body
 
 .backarrow 
 {
-    /* height: 100vh; */
     display: flex;
     justify-content: top;
     align-items: left; 
     flex-direction: column;
+    left: 2%;
+    margin-right: 30%;
+    
 }
 
 .arr 
 {
-    position: absolute;
     background: #ffffff00;
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    top: 4%;
-    left: 3%;
     transition: .4s ease;
 }
 
