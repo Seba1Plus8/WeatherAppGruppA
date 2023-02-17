@@ -44,11 +44,11 @@ input[type="submit"]
     border: none;
     outline: none;
     cursor: pointer;
-    background: #ffc107;
+    background: #737373;
     color: #fff;
 }
 
 input[type="submit"]:hover 
 {
-    background: #ff5722;
+    background: #5a5a5a;
 }
