@@ -168,6 +168,23 @@ h2 {
     margin: 0% 2% 0% 2%;
 }
 
+.settings-header
+{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.favourites-header
+{
+
+}
+
+.search-header
+{
+  
+}
+
 /* ----Styling på toggle---- */ 
 .switch {
     position: relative;
