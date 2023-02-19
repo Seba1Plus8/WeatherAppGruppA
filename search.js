@@ -1,11 +1,6 @@
-/* ---------------detta behöver vi ändra så att det blir rätt i search.html--------------
-
-const input = document.querySelector("input");
-const main = document.querySelector("main");
-const ul = document.querySelector(".favoriter");
-const button = document.querySelector("button");
-*/
-
+//--------------DOM elements
+const input = document.querySelector("#search-input");
+const ul = document.querySelector(".search-results");
 //------------detta är för att hitta temperaturen för staden------------
 let date = new Date();
 const year = date.getFullYear()
@@ -29,14 +24,13 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
         
         //-------------------detta skriver ut resultatet från sök
         if (input.value.length > 0) {
-            main.innerHTML = 
-            `<ul>
+            ul.innerHTML = 
+            `
             <li><a href="#">${data.results[0].name}, ${data.results[0].country}</a>
             <label for="test">
             <input type="checkbox" name="test" id="favorit">
             </label>
             </li>
-            </ul>
             ` 
         }
         
