@@ -160,3 +160,10 @@ if (tempNum>=20){
 }
 console.log(tempNum)
 
+function toggleStar(star) {
+    star.classList.toggle('marked');
+}
+
+
+
+
