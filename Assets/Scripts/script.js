@@ -64,27 +64,6 @@ async function getWeatherData(latitudes, longitudes) {
         temperatureSpan.textContent = fahrenheit.toFixed(2) + "°F";
       }
 
- /* --------Lista över sökta städer ------- */ 
-
-
- const form = document.getElementById('search-form');
- const searchResults = document.getElementById('search-results');
- 
- form.addEventListener('submit', function(event) {
-   event.preventDefault();
-   const searchTerm = this.search.value;
-   const listItem = document.createElement('li');
-   listItem.innerText = searchTerm;
-   
-   const list = document.createElement('ul');
-   list.appendChild(listItem);
-   searchResults.appendChild(list);
-   
-   this.reset();
- });
-
-
-
 //Set current Time, date, month 
 let currentDay= document.getElementById("day");
 let currentTime= document.getElementById("time");
