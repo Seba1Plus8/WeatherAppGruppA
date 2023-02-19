@@ -5,28 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2f1b119233.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="search.css">
-    <link rel="stylesheet" href="backarrow.css">
-    
 </head>
-<body onload="onload()">
-    
-    <div class="wrapper">
-        <header class="search-header">
-                <div class="backarrow">
-                    <button onclick="window.history.back()" class="arr left"><i class="fa-solid fa-arrow-left"></i></button>
-                </div>
-            <div class="box">
-             <form>
-                    <input class="searchBar" type="text" name="" placeholder="Type...">
-                    <input type="submit" name="submit" value="Search">
-                </form>
-            </div>
-        </header>
-        <main></main>
+<body>
+    <header>
+        <form id="search-form">
+            <input type="text" name="search" placeholder="Type..." id="search-input">
+            <input type="submit" value="Search"> <!--Behövs egentligen inte för funktionen, sparar för visuellt-->
+        </form>
+    </header>
+    <main>
+        <div class="box">
+            <ul id="search-results"></ul>
+        </div>
+    </main>
         <footer class="footer">
             <div class="footer__wrapper">
                 <a href="favourites.html" class="fa-solid fa-star fa-2xl"></a>
@@ -34,8 +28,8 @@
                 <a href="search.html" class="fa-solid fa-magnifying-glass fa-2xl"></a>
             </div>
     </footer>
-    </div>
-    <script src="script.js"></script>
+    <script src="/Assets/Scripts/script.js"></script>
+    <script src="/Assets/Scripts/search.js"></script>
         
     </div>
 </body>

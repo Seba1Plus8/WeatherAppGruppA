@@ -11,12 +11,12 @@ body{
   height: 100vh;
   background-position: center;
   background-attachment: fixed;
-  background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+  background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
   color: black;
   }
 
 .dark-mode {
-  background-image:url(Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+  background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
   color: white;
 }
 
@@ -90,7 +90,7 @@ header h1 {
 .wind, .pressure, .humidity {
   background-color: rgba(255, 255, 255, 0.521);
   opacity: 0.7;
-  padding: 20px;
+  padding: 30px 10px 30px 10px;
    border-radius: 10px;
 }
 
@@ -144,7 +144,6 @@ h2 {
     font-size: 25px;
     padding: 5px;
     padding-left: 20px;    
-    text-align: center;
 }
 
 .radio-toggle {
@@ -231,7 +230,7 @@ h2 {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: hsl(0, 0%, 90%);
+    background: linear-gradient(180deg,#ffffff,#cdcac4);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -241,7 +240,7 @@ h2 {
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    background: linear-gradient(180deg,#ffffff,#cdcac4);
   }
   
   input:checked + .slider:before {
@@ -274,3 +273,16 @@ h2 {
     content: '\2605';
     color: gold;
 }
+
+
+  /* ---- styling search ---*/
+  
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding-top: 20px;
+    padding-left: 0px;
+  }

@@ -158,7 +158,6 @@ if (tempNum>=20){
 } else {
     funnyText.innerText = "Vädret är oförutsägbart!"
 }
-
 console.log(tempNum)
 
 function toggleStar(star) {
