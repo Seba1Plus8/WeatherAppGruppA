@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="search.css">
 </head>
 <body>
-   <div class="box">
-    <form id="search-form">
-        <input type="text" name="search" placeholder="Type...">
-        <input type="submit" value="Search">
-      </form>
-      <ul id="search-results"></ul>
-   </div>
-    <div class="wrapper">
-        <header></header>
-        <main></main>
+    <header>
+        <form id="search-form">
+            <input type="text" name="search" placeholder="Type..." id="search-input">
+            <input type="submit" value="Search"> <!--Behövs egentligen inte för funktionen, sparar för visuellt-->
+        </form>
+    </header>
+    <main>
+        <div class="box">
+            <ul id="search-results"></ul>
+        </div>
+    </main>
         <footer class="footer">
             <div class="footer__wrapper">
                 <a href="favourites.html" class="fa-solid fa-star fa-2xl"></a>
@@ -27,7 +28,6 @@
                 <a href="search.html" class="fa-solid fa-magnifying-glass fa-2xl"></a>
             </div>
     </footer>
-    </div>
     <script src="script.js"></script>
         
     </div>
