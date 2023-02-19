@@ -265,11 +265,11 @@ h2 {
     cursor: pointer;
     
 }
-.star-icon:before {
+.star-icon::before {
     content: '\2606';
     color: white;
 }
-.star-icon.marked:before {
+.star-icon.marked::before {
     content: '\2605';
     color: gold;
 }

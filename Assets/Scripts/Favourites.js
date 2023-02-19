@@ -24,9 +24,7 @@ function showFavouriteCity(list) {
         const li = document.createElement("li");
         if (element.name != undefined) {
             li.innerHTML = `<a href="#" data-index="${counter}">${element.name}, ${element.country}</a>
-            <label for="test">
-            <input type="checkbox" name="test" id="favorit" checked>
-            </label>` 
+            <span class="star-icon marked"></span>`
             ul.append(li);
             counter++;               
         }
@@ -43,8 +41,8 @@ function showFavouriteCity(list) {
 
 
 
-        favorit = document.querySelector("#favorit");
-        favorit.addEventListener('change', function() {
+        favorit = document.querySelector(".star-icon");
+        favorit.addEventListener('click', function() {
             updateStar(favorit, list[0])
         })
 
@@ -67,10 +65,12 @@ function showFavouriteCity(list) {
         
         function updateStar(checkbox, item) {
 
-            if (checkbox.checked) {      
+            if (favorit.classList.contains("marked")) {      
                 saveFavorit(item);
+                favorit.classList.toggle('marked');
                 console.log("lägger till");
             } else {
+                favorit.classList.toggle('marked');
                 console.log("ta bort");
                 deleteFavorit(item);
             }
