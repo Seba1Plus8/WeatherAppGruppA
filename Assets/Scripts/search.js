@@ -1,6 +1,7 @@
 //--------------DOM elements
 const input = document.querySelector("#search-input");
 const ul = document.querySelector("#search-results");
+const box = document.querySelector(".box")
 //------------detta är för att hitta temperaturen för staden------------
 let date = new Date();
 const year = date.getFullYear()
