@@ -47,18 +47,16 @@ const form = document.getElementById('search-form');
             ul.innerHTML = 
             `
             <li><a href="#">${data.results[0].name}, ${data.results[0].country}</a>
-            <label for="test">
-            <input type="checkbox" name="test" id="favorit">
-            </label>
+            <span class="star-icon"></span>
             </li>
             ` 
         }
         
-        favorit = document.querySelector("#favorit");
+        favorit = document.querySelector(".star-icon");
         const a = document.querySelector("a");
         
         if (favorit != undefined) {
-            favorit.addEventListener("change", function() {
+            favorit.addEventListener("click", function() {
                 updateStar(favorit, data.results[0]);
                 
             })
@@ -85,23 +83,24 @@ const form = document.getElementById('search-form');
         
         const h1 = document.createElement("h1");
         h1.innerText = `${Math.round(temp)}` 
-        main.append(h1)
+        box.append(h1)
     }
     //----------------Detta är funktionerna när man lägger till i sparade städer och tar bort från sparade städer
     function updateStar(checkbox, item) {
         console.log(item)
-        if (checkbox.checked) {      
+        if (!checkbox.classList.contains("marked")) {      
             saveFavorit(item);
+            checkbox.classList.toggle('marked');
         } else {
-            console.log("ta bort");
             deleteFavorit(item);
+            checkbox.classList.toggle('marked');
         }
     }
     
     async function saveFavorit(result) {
         const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.latitude}&longitude=${result.longitude}&hourly=temperature_2m,apparent_temperature,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Europe%2FBerlin`);
         const data = await res.json();
-        
+        console.log("spara")
         favoriter.push(result);
         favoriter.push(data);
         localStorage.setItem('favoriter', JSON.stringify(favoriter));
