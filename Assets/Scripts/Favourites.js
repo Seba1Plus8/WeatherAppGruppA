@@ -65,12 +65,12 @@ function showFavouriteCity(list) {
         
         function updateStar(checkbox, item) {
 
-            if (favorit.classList.contains("marked")) {      
+            if (!checkbox.classList.contains("marked")) {      
                 saveFavorit(item);
-                favorit.classList.toggle('marked');
+                checkbox.classList.toggle('marked');
                 console.log("lägger till");
             } else {
-                favorit.classList.toggle('marked');
+                checkbox.classList.toggle('marked');
                 console.log("ta bort");
                 deleteFavorit(item);
             }
