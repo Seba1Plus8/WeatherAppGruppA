@@ -1,4 +1,26 @@
+/* -------- Temperature converter --------- */ 
 
+const tempButtons = document.querySelectorAll('input[name="temp-setting"]');
+
+for(const tempButton of tempButtons){
+   tempButton.addEventListener('change', showSelected);
+}     
+
+   function showSelected(e) {
+       if (this.checked) {
+       if (this.value === "fahrenheit") {
+           console.log("Fahrenheit selected");
+           localStorage.setItem("tempUnit", "fahrenheit")
+            convertToC();
+       } else if (this.value === "celsius") {
+           console.log("Celsius selected");
+           localStorage.setItem("tempUnit", "celsius")
+            convertToF();
+       }
+       }
+   }
+
+   
 /* ------ DARKMODE ------ */
 function darkmode() {
     const wasDarkmode = localStorage.getItem('darkmode') === 'true';
