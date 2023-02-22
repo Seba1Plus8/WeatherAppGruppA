@@ -14,30 +14,31 @@ body{
   background-position: center;
   background-attachment: fixed;
   background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+  color: white;
   }
 
 .dark-mode {
   background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+  color: white;
 }
 
 .dark-mode .eachDiv {
-  background-color: rgba(0, 0, 0, 0.55);
-}
-
-.dark-mode .displayed-info {
   background-color: rgba(0, 0, 0, 0.521);
+}
+.dark-mode .displayed-info {
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 .dark-mode .wind {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 .dark-mode .pressure {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 .dark-mode .humidity {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 header h1 {
@@ -137,52 +138,43 @@ text-align: center;
 }
 
 .eachDiv {
-  background-color: rgba(49, 1, 99, 0.34);
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.521);
+  border-radius: 3px;
   margin: 3px;
-  padding: 5px;
+  padding: 10px;
 }
 
 h2 {
     font-size: 25px;
-    padding: 5px;
-    padding-left: 20px;    
+}
+
+#tempatureUnit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 8px; */
 }
 
 #tempatureUnit {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-.radio-toggle {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin: 0% 2% 0% 2%;
     font-size: 17px;
 }
 
 .radio {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     display: inline;
 }
 
 .aboutService {
   width: 350px;
-  display: flex;
-  flex-direction: column;
 }
 
 .aboutTxt {
-  /* padding-left: 20px; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding-left: 20px;
 }
 
 #tempatureUnit p {
@@ -196,10 +188,15 @@ h2 {
     margin: 0% 2% 0% 2%;
 }
 
-.settings-header
-{
+.backarrow-settings {
+  position: absolute;
+  top: 40px;
+  padding-left: 15px;
+}
+
+.header-img {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -235,7 +232,7 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(243, 232, 255, 0.6);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -243,17 +240,17 @@ h2 {
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 21px;
+    width: 21px;
     left: 4px;
-    bottom: 4px;
+    bottom: 3px;
     background: linear-gradient(180deg,#ffffff,#cdcac4);
     -webkit-transition: .4s;
     transition: .4s;
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: rgba(152, 139, 169, 0.6);
   }
   
   input:focus + .slider {
@@ -268,7 +265,8 @@ h2 {
   
   /* Rounded sliders */
   .slider.round {
-    border-radius: 34px;
+    border: solid 4px rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
   }
   
   .slider.round:before {
