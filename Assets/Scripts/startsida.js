@@ -26,11 +26,8 @@
     fetch(weatherApiUrl)
     .then(res=>res.json())
     .then (data =>{
-
-        let dayTime = new Date();
-        let timeString = dayTime.toISOString().slice(0, 19);
     
-
+        
 
 
         
@@ -62,9 +59,13 @@ let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov",
 
 //Get day, month and date
 let today = new Date();
+let year = today.getFullYear()
 let day = today.getDay();
 let month = today.getMonth();
 let date = today.getDate();
+let hour = today.getHours()
+
+let timeString = `${year}-0${month}-${date}T${hour}:00`;
 
 
 
