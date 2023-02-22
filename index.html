@@ -25,14 +25,14 @@
 <!-- Container för allt som ska visas på huvuddelen: stad, dag, tid, icon för vädret, grader  -->
                 <div class="displayed-info">
 
-                    <div class="city">Stad</div>
+                    <div class="city" id="showCurrentCity"></div>
 
                     <div class="day-time" id="day"></div>
                     <span class="time" id="time"></span>
 
                     <div class="current-weather-icon"><i class="fa-regular fa-sun"></i></div>
 
-                    <div class="current-temperature"></div>
+                    <div class="current-temperature" id="currentTemp"></div>
                     <span class="temperature" id="temp-span">-10°C</span>
         
                 </div>
@@ -44,11 +44,11 @@
             <div class="extra-info-container">
 
                 
-                    <div class="wind">Wind Speed 4 m/s</div>
+                    <div class="wind" id="windSpeed">Wind Speed 4 m/s</div>
 
-                    <div class="pressure">Pressure 1028 hPa</div>
+                    <div class="pressure" id="pressure">Pressure 1028 hPa</div>
 
-                    <div class="humidity">Humidity 74%</div>
+                    <div class="humidity" id="humidity">Humidity 74%</div>
             </div> 
 
     <!-- Container för extra text (funny text) som ska visas på sidan -->

@@ -1,26 +1,56 @@
-async function getWeatherData(latitudes, longitudes) {
-    const weatherData = [];
-  
-    for (let i = 0; i < latitudes.length; i++) {
-      const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitudes[i]}&longitude=${longitudes[i]}&hourly=temperature_2m,relativehumidity_2m,rain,snowfall,visibility,windspeed_10m`;
-      const res = await fetch(apiUrl);
-      const data = await res.json();
-  
-      weatherData.push(data);
-    }
-  
-    return weatherData;
-  }
-  
-  const latitudes = [];
-  const longitudes = [];
-  
-  getWeatherData(latitudes, longitudes).then((weatherData) => {
-    console.log(weatherData);
-    showCurrentTemp()
 
-  });
+  const options = {
+    enableHighAccuracy: true
+  };
 
+     const successCallback = (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    let printCity = document.getElementById("showCurrentCity");
+    let windSpeed = document.getElementById("windSpeed");
+    let pressure = document.getElementById("pressure");
+    let humidity = document.getElementById("humidity");
+    let temperature = document.getElementById("temp-span");
+
+
+    let apiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+    fetch(apiUrl)
+    .then(res => res.json())
+    .then(data => {
+        const city = data.city;
+        printCity.innerHTML = city;
+    })
+
+    let weatherApiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,rain,snowfall,surface_pressure,visibility,windspeed_10m`;
+    fetch(weatherApiUrl)
+    .then(res=>res.json())
+    .then (data =>{
+
+        let timeStr = currentTime.innerHTML;
+        
+
+
+
+
+
+        console.log(data);
+        showCurrentTemp()
+        
+    })
+ 
+    console.log(position);
+  };
+  
+  const errorCallback = (error) => {
+    console.log(error);
+  };
+  
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
+ 
+
+
+  
 
   //Set current Time, date, month 
 let currentDay= document.getElementById("day");
