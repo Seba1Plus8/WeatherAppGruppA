@@ -3,7 +3,7 @@
     enableHighAccuracy: true
   };
 
-     const successCallback = (position) => {
+    const successCallback = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
 
@@ -27,13 +27,14 @@
     .then(res=>res.json())
     .then (data =>{
 
-        let timeStr = currentTime.innerHTML;
+        let dayTime = new Date();
+        let timeString = dayTime.toISOString().slice(0, 16);
+    
+
+
+
         
-
-
-
-
-
+        console.log(timeString);
         console.log(data);
         showCurrentTemp()
         
@@ -64,6 +65,9 @@ let today = new Date();
 let day = today.getDay();
 let month = today.getMonth();
 let date = today.getDate();
+
+
+
 
 let monthIs = months[month];
 let todayIs= weekDays[day];
