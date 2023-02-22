@@ -3,6 +3,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
+
 }
 
 body{
@@ -17,6 +19,11 @@ body{
 
 .dark-mode {
   background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
+  color: white;
+}
+
+.dark-mode .eachDiv {
+  background-color: rgba(0, 0, 0, 0.521);
 }
 .dark-mode .displayed-info {
   background-color: rgba(49, 1, 99, 0.34);
@@ -105,6 +112,9 @@ text-align: center;
     bottom: 0;
     left: 0;
     height: 5em;
+    border-radius: 15px 15px 0 0;
+    background: rgba(243, 232, 255, 0.4);
+    backdrop-filter: blur(2px);
 }
 
 .footer__wrapper {
@@ -128,9 +138,8 @@ text-align: center;
 }
 
 .eachDiv {
-  background-color: rgba(49, 1, 99, 0.34);
-  border: 4px solid rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.521);
+  border-radius: 3px;
   margin: 3px;
   padding: 10px;
 }
@@ -146,10 +155,11 @@ h2 {
   /* padding: 8px; */
 }
 
-.radio-toggle {
+#tempatureUnit {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0% 2% 0% 2%;
     font-size: 17px;
 }
 
@@ -160,9 +170,11 @@ h2 {
 }
 
 .aboutService {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
+  width: 350px;
+}
+
+.aboutTxt {
+  padding-left: 20px;
 }
 
 #tempatureUnit p {
@@ -269,18 +281,53 @@ h2 {
     
 }
 .star-icon::before {
-    content: '\2606';
-    color: white;
+    content: '\f005';
+    font-family: "Font Awesome 6 Free";
+    font-size: 25px;
+    margin: 1.2rem 1rem 0;
+    color: #E9d5FF;
+    font-weight: 400;
 }
 .star-icon.marked::before {
-    content: '\2605';
-    color: gold;
+    font-weight: 900;
 }
 
 
   /* ---- styling search ---*/
   
-
+  .search-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #search-form {
+    position: relative;
+  }
+  #search-label {
+    position:absolute;
+    right: 8%;
+    top: 48%;
+    width: 25px;
+    height: auto;
+    color: #fafafa;
+  }
+  #search-input, .search-item {
+    width: 380px;
+    height: 60px;
+    border-radius: 25px;
+    background: rgba(49, 1, 99, 0.34);
+    border: solid 4px rgba(255, 255, 255, 0.4);
+  }
+  #search-input {
+    width:max-content;
+    height: auto;
+    border-radius: 25px;
+    padding: 15px 180px 15px 15px;
+  }
+  :is(#search-input:focus) + label {
+    display: none;
+  }
   li {
     list-style: none;
   }
