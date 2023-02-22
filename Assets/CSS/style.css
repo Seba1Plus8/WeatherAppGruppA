@@ -3,6 +3,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
+
 }
 
 body{
@@ -12,16 +14,14 @@ body{
   background-position: center;
   background-attachment: fixed;
   background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
-  color: black;
   }
 
 .dark-mode {
   background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
-  color: white;
 }
 
 .dark-mode .eachDiv {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(0, 0, 0, 0.55);
 }
 
 .dark-mode .displayed-info {
@@ -134,8 +134,10 @@ text-align: center;
 }
 
 .eachDiv {
-  background-color: rgba(255, 255, 255, 0.521);
-  border-radius: 3px;
+  background-color: rgba(49, 1, 99, 0.34);
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
   margin: 3px;
   padding: 5px;
 }
@@ -146,10 +148,17 @@ h2 {
     padding-left: 20px;    
 }
 
-.radio-toggle {
+#tempatureUnit {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.radio-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0% 2% 0% 2%;
     font-size: 17px;
 }
@@ -162,10 +171,15 @@ h2 {
 
 .aboutService {
   width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
 .aboutTxt {
-  padding-left: 20px;
+  /* padding-left: 20px; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #tempatureUnit p {
