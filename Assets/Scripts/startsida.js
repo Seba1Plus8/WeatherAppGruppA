@@ -28,7 +28,7 @@
     .then (data =>{
 
         let dayTime = new Date();
-        let timeString = dayTime.toISOString().slice(0, 16);
+        let timeString = dayTime.toISOString().slice(0, 19);
     
 
 
