@@ -137,8 +137,6 @@ text-align: center;
 
 h2 {
     font-size: 25px;
-    padding: 5px;
-    padding-left: 20px;    
 }
 
 #tempatureUnit {
@@ -162,15 +160,9 @@ h2 {
 }
 
 .aboutService {
-  width: 350px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.aboutTxt {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 #tempatureUnit p {
@@ -184,10 +176,15 @@ h2 {
     margin: 0% 2% 0% 2%;
 }
 
-.settings-header
-{
+.backarrow-settings {
+  position: absolute;
+  top: 40px;
+  padding-left: 15px;
+}
+
+.header-img {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -223,7 +220,7 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(243, 232, 255, 0.6);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -231,17 +228,17 @@ h2 {
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 21px;
+    width: 21px;
     left: 4px;
-    bottom: 4px;
+    bottom: 3px;
     background: linear-gradient(180deg,#ffffff,#cdcac4);
     -webkit-transition: .4s;
     transition: .4s;
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: rgba(152, 139, 169, 0.6);
   }
   
   input:focus + .slider {
@@ -256,7 +253,8 @@ h2 {
   
   /* Rounded sliders */
   .slider.round {
-    border-radius: 34px;
+    border: solid 4px rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
   }
   
   .slider.round:before {
