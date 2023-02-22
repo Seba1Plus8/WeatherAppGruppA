@@ -12,32 +12,26 @@ body{
   background-position: center;
   background-attachment: fixed;
   background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
-  color: black;
+  color: white;
   }
 
 .dark-mode {
   background-image:url(/Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg);
-  color: white;
 }
-
-.dark-mode .eachDiv {
-  background-color: rgba(0, 0, 0, 0.521);
-}
-
 .dark-mode .displayed-info {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 .dark-mode .wind {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 .dark-mode .pressure {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 .dark-mode .humidity {
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(49, 1, 99, 0.34);
 }
 
 header h1 {
@@ -134,10 +128,11 @@ text-align: center;
 }
 
 .eachDiv {
-  background-color: rgba(255, 255, 255, 0.521);
-  border-radius: 3px;
+  background-color: rgba(49, 1, 99, 0.34);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
   margin: 3px;
-  padding: 5px;
+  padding: 10px;
 }
 
 h2 {
@@ -146,22 +141,32 @@ h2 {
     padding-left: 20px;    
 }
 
+#tempatureUnit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 8px; */
+}
+
 .radio-toggle {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0% 2% 0% 2%;
+    flex-direction: column;
+    align-items: flex-start;
     font-size: 17px;
 }
 
 .radio {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     display: inline;
 }
 
 .aboutService {
   width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutTxt {
