@@ -18,25 +18,6 @@ JSON.parse(localStorage.getItem('favoriter'))
 storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
 
 
-/* ------sparar ifall vi behöver det i framtiden
-const form = document.getElementById('search-form');
- const searchResults = document.getElementById('search-results');
- 
- form.addEventListener('submit', function(event) {
-   event.preventDefault();
-   const searchTerm = this.search.value;
-   const listItem = document.createElement('li');
-   listItem.innerText = searchTerm;
-   
-   const list = document.createElement('ul');
-   list.appendChild(listItem);
-   searchResults.appendChild(list);
-   
-   this.reset();
- });
-*/
-
-
 //-----------------denna funktion körs varje gång man skriver in en bokstav på sökrutan
     async function updateValue() {
         const res = await fetch("https://geocoding-api.open-meteo.com/v1/search?name=" + input.value);
@@ -46,8 +27,7 @@ const form = document.getElementById('search-form');
         if (input.value.length > 0) {
             ul.innerHTML = 
             `
-            <li><a href="#">${data.results[0].name}, ${data.results[0].country}</a>
-            <span class="star-icon"></span>
+            <li class="search-item"><span class="star-icon"></span><a href="#">${data.results[0].name}, ${data.results[0].country}</a>
             </li>
             ` 
         }
@@ -75,6 +55,7 @@ const form = document.getElementById('search-form');
         
         let hours = [];
         let index;
+        console.log(data)
         hours = data.hourly.time;
         temps = data.hourly.temperature_2m;
         index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
@@ -100,9 +81,11 @@ const form = document.getElementById('search-form');
     async function saveFavorit(result) {
         const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.latitude}&longitude=${result.longitude}&hourly=temperature_2m,apparent_temperature,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Europe%2FBerlin`);
         const data = await res.json();
+
         console.log("spara")
         favoriter.push(result);
         favoriter.push(data);
+        
         localStorage.setItem('favoriter', JSON.stringify(favoriter));
         storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
     }
