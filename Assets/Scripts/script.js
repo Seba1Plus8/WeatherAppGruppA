@@ -1,3 +1,14 @@
+/* -------- precheck radio buttons for temperature --------- */ 
+
+const tempUnit = localStorage.getItem("tempUnit");
+
+if (tempUnit === "fahrenheit") {
+  document.querySelector('input[value="fahrenheit"]').checked = true;
+} else if (tempUnit === "celsius") {
+  document.querySelector('input[value="celsius"]').checked = true;
+}
+
+
 /* -------- Temperature converter --------- */ 
 
 const tempButtons = document.querySelectorAll('input[name="temp-setting"]');
@@ -10,9 +21,11 @@ for(const tempButton of tempButtons){
        if (this.checked) {
        if (this.value === "fahrenheit") {
            console.log("Fahrenheit selected");
+           this.checked = true;
            localStorage.setItem("tempUnit", "fahrenheit")
             convertToC();
        } else if (this.value === "celsius") {
+            this.checked = true;
            console.log("Celsius selected");
            localStorage.setItem("tempUnit", "celsius")
             convertToF();
