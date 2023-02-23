@@ -25,7 +25,7 @@
     })
 
     //API för väder /Skriva ut väder på current location och current time
-    let weatherApiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,rain,snowfall,surface_pressure,visibility,windspeed_10m`;
+    let weatherApiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,rain,snowfall,surface_pressure,visibility,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Europe%2FBerlin`;
     fetch(weatherApiUrl)
     .then(res=>res.json())
     .then (data =>{
@@ -55,10 +55,36 @@
         windSpeed.innerHTML = `Wind speed ${Math.round(wind)}m/s`;
         humidity.innerHTML = `Humidity ${Math.round(humidityValue)}%`;
         pressure.innerHTML = `Pressure ${Math.round(pressureSurface)} hPa`;
-
-        
-        
+  
         showCurrentTemp()
+        
+
+
+//Hämta WMO kod och skapa text beroende på kod
+
+        let WMO = data.daily.weathercode[0];
+        console.log(WMO)
+        let funnyText = document.querySelector("#information-text")
+
+
+        let sunnyWeatherCode = [0, 1, 2, 3];
+        let snowyWeatherCode = [71, 73, 75];
+        let rainyWeatherCode = [61, 63, 65];
+        let ThunderWeatherCode = [95, 96, 99];
+        
+        
+        if (sunnyWeatherCode.includes(WMO)) {
+            funnyText.innerText = "Perfekt väder för att ta en öl i solen, glöm inte solglasögonen!";
+          } else if (snowyWeatherCode.includes(WMO)) {
+            funnyText.innerText = "Kallt ute! Räkna med att frysa om inte du har varma kläder!";
+          } else if (rainyWeatherCode.includes(WMO)) {
+            funnyText.innerText = "Det regnar ute, ta med ett paraply!";
+          } else if (ThunderWeatherCode.includes(WMO)) {
+            funnyText.innerText = "Håll dig inomhus, åskar!!";
+          } else {
+            funnyText.innerText = "Vädret är opålitiligt!"
+          }
+
         
     })
  
@@ -140,6 +166,7 @@ setInterval(() => {
 }, 1000); 
 
 
+/* -------- Temperature converter --------- */ 
 
 function showCurrentTemp() {
     const tempUnit = localStorage.getItem("tempUnit")
@@ -161,24 +188,6 @@ function convertToC() {
     temperatureSpan.textContent = fahrenheit.toFixed(2) + "°F";
   }
 
-/* -------- Temperature converter --------- */ 
-
-     let temp = document.querySelector(".temperature")
-     let funnyText = document.querySelector("#information-text")
-     
-     let tempNum = parseInt(temp.innerHTML)
-     
-     
-     if (tempNum>=20){
-         funnyText.innerText = "Perfekt väder för att ta en öl i solen, glöm inte solglasögonen!"
-     } else if (tempNum<0) {
-         funnyText.innerText = "Kallt ute! Räkna med att frysa om inte du har varma kläder!"
-     } else if (tempNum<20 || tempNum>0){
-         funnyText.innerText = "Nu är vädret lagom!"
-     } else {
-         funnyText.innerText = "Vädret är oförutsägbart!"
-     }
-     console.log(tempNum)
      
      function toggleStar(star) {
          star.classList.toggle('marked');
