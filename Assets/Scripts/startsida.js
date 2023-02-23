@@ -1,8 +1,9 @@
-
+//Den delen försöker ge hög platsnoggrannhet
   const options = {
     enableHighAccuracy: true
   };
 
+  //API för current location och API för väder 
     const successCallback = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -13,7 +14,8 @@
     let humidity = document.getElementById("humidity");
     let temperature = document.getElementById("temp-span");
 
-
+//Den delen hämtar en gratis API som anväds för att hämta latitude och longitude och visa vilken stad/exakt location av användaren
+//För att API ska funka och kunna hämta info, användaren måste acceptera location på webläsaren och datorn också!
     let apiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
     fetch(apiUrl)
     .then(res => res.json())
@@ -22,22 +24,45 @@
         printCity.innerHTML = city;
     })
 
+    //API för väder /Skriva ut väder på current location och current time
     let weatherApiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m,relativehumidity_2m,rain,snowfall,surface_pressure,visibility,windspeed_10m`;
     fetch(weatherApiUrl)
     .then(res=>res.json())
     .then (data =>{
     
-        
+        let hours = [];
+        let tempArr = [];
+        let windSpeedArr = [];
+        let pressureArr = [];
+        let humidityArr = [];
+        let index;
 
+        hours = data.hourly.time;
+        tempArr = data.hourly.temperature_2m;
+        windSpeedArr = data.hourly.windspeed_10m;
+        pressureArr = data.hourly.surface_pressure;
+        humidityArr = data.hourly.relativehumidity_2m;
+
+        index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
+
+        wind = windSpeedArr.at(index);
+        pressureSurface = pressureArr.at(index);
+        humidityValue = humidityArr.at(index);
+        temp = tempArr.at(index);
+    
+        
+        temperature.innerHTML=`${Math.round(temp)}`+"°C";
+        windSpeed.innerHTML = `Wind speed ${Math.round(wind)}m/s`;
+        humidity.innerHTML = `Humidity ${Math.round(humidityValue)}%`;
+        pressure.innerHTML = `Pressure ${Math.round(pressureSurface)} hPa`;
 
         
-        console.log(timeString);
-        console.log(data);
+        
         showCurrentTemp()
         
     })
  
-    console.log(position);
+   
   };
   
   const errorCallback = (error) => {
