@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/Assets/CSS/style.css">
 </head>
 <body >
     
     
-        <header>
+        <header id="header-home-page">
+        <div class="header-cont">
+            <span class="time" id="time"></span>
             <h1 id="logo"><img src="Assets/Pictures/Logo.png" alt="logo_homepage"></h1>
+        </div>
         </header>
 
 
@@ -28,11 +34,9 @@
                     <div class="city" id="showCurrentCity"></div>
 
                     <div class="day-time" id="day"></div>
-                    <span class="time" id="time"></span>
 
-                    <div class="current-weather-icon"><i class="fa-regular fa-sun"></i></div>
+                    <div class="current-weather-icon"><img id="weather-icon-current" src="/Assets/Pictures/snow_icon.png" alt="weather_icon"></i></div>
 
-                    <div class="current-temperature" id="currentTemp"></div>
                     <span class="temperature" id="temp-span"></span>
         
                 </div>
@@ -43,20 +47,23 @@
 
             <div class="extra-info-container">
 
-                
+                <div class="extra-weather-info">
                     <div class="wind" id="windSpeed"></div>
 
                     <div class="pressure" id="pressure"></div>
 
                     <div class="humidity" id="humidity"></div>
+                </div>
+
+                
+                    <p id="information-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum justo at ultricies scelerisque. Maecenas pretium ligula in risus porttitor condimentum ut non velit. Fusce ex mi, dapibus in luctus in, pharetra at tortor. Mauris malesuada, quam eget tempus auctor, sem mi consectetur nisi, in finibus libero dui egestas augue. Donec neque nibh, suscipit sed pharetra finibus, faucibus non orci. Praesent ut viverra tellus, id consequat justo.
+                    </p>
+                
+
             </div> 
 
     <!-- Container för extra text (funny text) som ska visas på sidan -->
-            <div class="text-container">
-                <p id="information-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vestibulum justo at ultricies scelerisque. Maecenas pretium ligula in risus porttitor condimentum ut non velit. Fusce ex mi, dapibus in luctus in, pharetra at tortor. Mauris malesuada, quam eget tempus auctor, sem mi consectetur nisi, in finibus libero dui egestas augue. Donec neque nibh, suscipit sed pharetra finibus, faucibus non orci. Praesent ut viverra tellus, id consequat justo.
-                </p>
-            </div>
         </main>
 
 

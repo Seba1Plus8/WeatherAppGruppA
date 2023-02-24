@@ -7,13 +7,15 @@
 }
 
 body{
-  font-family: 'Be Vietnam Pro', sans-serif;
-  background-size: cover;
-  height: 100vh;
-  background-position: center;
-  background-attachment: fixed;
-  background-image:url(/Assets/Pictures/frame-harirak-5Q5jtb1SEVo-unsplash.jpg); 
-  color: white;
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(47, 46, 46, 0.6), rgba(0, 0, 0, 0.6)),  url(/Assets/Pictures/frame-harirak-5Q5jtb1SEVo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
   }
 
 .dark-mode {
@@ -36,69 +38,102 @@ body{
   background-color: rgba(49, 1, 99, 0.34);
 }
 
-header h1 {
-    text-align: center;
-    padding-top: 30px;
+ .header-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  flex: 1;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+  padding-right: 105px;
+}
+ 
+
 .container {
-    padding-top: 100px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 20px;
+
 }
 
-.displayed-info {
-  background-color: rgba(255, 255, 255, 0.521);
-  opacity: 0.7;
-  padding: 20px;
-  border-radius: 30px;
-  width: 50%;
+#weather-icon-current{
+  height: 100px;
+  width: 100px;
+}
+
+#time{
+  font-size: 40px;
+  font-weight: 100;
+  margin: 0;
 }
 
 .city {
-    font-size: 40px;
-    padding: 10px;
+    font-size: 45px;
+    padding-top: 5px;
+    font-weight: 200;
+    letter-spacing: 5px;
 }
 
 .day-time {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 0;
+    font-weight: 100;
+
 }
 
 .current-weather-icon {
     font-size: 20px;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 .current-temperature {
     font-size: 16px;
 }
 
+#temp-span {
+  font-size: 30px;
+}
+
+
 .extra-info-container{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding-top: 100px;
+  margin: 0 auto;
+  width: 90%;
+  background-color: rgba(59, 57, 61, 0.34);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
 }
 
-.wind, .pressure, .humidity {
-  background-color: rgba(255, 255, 255, 0.521);
-  opacity: 0.7;
-  padding: 30px 10px 30px 10px;
-   border-radius: 10px;
+.extra-weather-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px;
 }
 
-.text-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-}
-
-#information-text {
-  width: 60%;
+#information-text{
   text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+  font-style: italic;
+}
+
+#windSpeed, #pressure, #humidity {
+  font-weight: 200;
 }
 
 .footer {
@@ -106,7 +141,7 @@ header h1 {
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 5em;
+    height: 4em;
     border-radius: 15px 15px 0 0;
     background: rgba(243, 232, 255, 0.4);
     backdrop-filter: blur(2px);
@@ -127,7 +162,7 @@ header h1 {
 /* ----Footer for settings page---- */
 .settings-footer {
   width: 100%;
-  height: 5em;
+  height: 4em;
   border-radius: 15px 15px 0 0;
   background: rgba(243, 232, 255, 0.4);
   backdrop-filter: blur(2px);
@@ -140,15 +175,17 @@ header h1 {
 }
 
 .eachDiv {
-  background-color: rgba(49, 1, 99, 0.34);
+  background-color: rgba(59, 57, 61, 0.34);
   border: 4px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   margin: 3px;
   padding: 10px;
+  font-weight: 100;
 }
 
 h2 {
     font-size: 25px;
+    font-weight: 200;
 }
 
 #tempatureUnit {
@@ -171,6 +208,7 @@ h2 {
 }
 
 .AboutApp {
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,6 +216,7 @@ h2 {
 }
 
 .AboutTxt {
+  font-weight: 100;
   display: flex;
   align-items: center;
   justify-content: center;
