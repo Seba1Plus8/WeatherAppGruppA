@@ -43,7 +43,10 @@
         pressureArr = data.hourly.surface_pressure;
         humidityArr = data.hourly.relativehumidity_2m;
 
-        index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
+        index = hours.indexOf(`${year}-0${month}-${date}T${hour}:00`)
+        console.log(index);
+        console.log(`${year}-0${month}-${date}T${hour}:00`);
+        
 
         wind = windSpeedArr.at(index);
         pressureSurface = pressureArr.at(index);
@@ -52,9 +55,9 @@
         
         
         temperature.innerHTML=`${Math.round(temp)}`+"°C";
-        windSpeed.innerHTML = `Wind speed ${Math.round(wind)}m/s`;
-        humidity.innerHTML = `Humidity ${Math.round(humidityValue)}%`;
-        pressure.innerHTML = `Pressure ${Math.round(pressureSurface)} hPa`;
+        windSpeed.innerHTML = `Wind speed <br> ${Math.round(wind)}m/s`;
+        humidity.innerHTML = `Humidity <br> ${Math.round(humidityValue)}%`;
+        pressure.innerHTML = `Pressure <br> ${Math.round(pressureSurface)} hPa`;
   
         showCurrentTemp()
         
@@ -112,11 +115,15 @@ let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov",
 let today = new Date();
 let year = today.getFullYear()
 let day = today.getDay();
-let month = today.getMonth();
+let month = today.getMonth()+1;
 let date = today.getDate();
 let hour = today.getHours()
 
+
+
 let timeString = `${year}-0${month}-${date}T${hour}:00`;
+
+console.log(timeString);
 
 
 
