@@ -29,7 +29,7 @@
     fetch(weatherApiUrl)
     .then(res=>res.json())
     .then (data =>{
-    
+
         let hours = [];
         let tempArr = [];
         let windSpeedArr = [];
@@ -49,7 +49,7 @@
         pressureSurface = pressureArr.at(index);
         humidityValue = humidityArr.at(index);
         temp = tempArr.at(index);
-    
+        
         
         temperature.innerHTML=`${Math.round(temp)}`+"°C";
         windSpeed.innerHTML = `Wind speed ${Math.round(wind)}m/s`;
