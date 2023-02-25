@@ -63,27 +63,42 @@
         
 
 
-//Hämta WMO kod och skapa text beroende på kod
+//Hämta WMO kod och skapa text/ikon beroende på WMO kod
 
         let WMO = data.daily.weathercode[0];
         console.log(WMO)
         let funnyText = document.querySelector("#information-text")
+        let weatherIcon = document.querySelector("#weather-icon-current")
+        let body = document.querySelector("body")
 
 
-        let sunnyWeatherCode = [0, 1, 2, 3];
-        let snowyWeatherCode = [71, 73, 75];
-        let rainyWeatherCode = [61, 63, 65];
+        let sunnyWeatherCode = [0];
+        let CloudyWeatherCode = [1, 2, 3, 45, 48];
+        let snowyWeatherCode = [71, 73, 75, 77, 85, 86];
+        let rainyWeatherCode = [61, 63, 65, 51, 53, 55, 80, 81, 82];
         let ThunderWeatherCode = [95, 96, 99];
         
         
         if (sunnyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Perfekt väder för att ta en öl i solen, glöm inte solglasögonen!";
+            weatherIcon.src="/Assets/Pictures/sun_icon.png";
+            body.style.backgroundImage = 'url("Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg")';
           } else if (snowyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Kallt ute! Räkna med att frysa om inte du har varma kläder!";
+            weatherIcon.src="/Assets/Pictures/snow_icon.png";
+            body.style.backgroundImage = 'url("Assets/Pictures/gabriel-alenius-USXfF_ONUGo-unsplash.jpg")';
           } else if (rainyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Det regnar ute, ta med ett paraply!";
+            weatherIcon.src="/Assets/Pictures/rain_icon.png";
+            body.style.backgroundImage = 'url("Assets/Pictures/frame-harirak-5Q5jtb1SEVo-unsplash.jpg")';
           } else if (ThunderWeatherCode.includes(WMO)) {
             funnyText.innerText = "Håll dig inomhus, åskar!!";
+            weatherIcon.src="/Assets/Pictures/rain_icon.png";
+            body.style.backgroundImage = 'url("Assets/Pictures/Rainy-day-picture.jpg")';
+          } else if (CloudyWeatherCode.includes(WMO)) {
+            funnyText.innerText = "Lite molnigt, kunde varit värre!";
+            weatherIcon.src="/Assets/Pictures/clod_icon.png";
+            body.style.backgroundImage = 'url("Assets/Pictures/tobias-stonjeck-e_ZxKz3_2Nc-unsplash.jpg")';
           } else {
             funnyText.innerText = "Vädret är opålitiligt!"
           }
