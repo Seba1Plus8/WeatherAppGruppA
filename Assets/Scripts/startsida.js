@@ -1,27 +1,3 @@
-<<<<<<< HEAD
- async function getWeatherData(latitudes, longitudes) {
-   const weatherData = [];
-  
-   for (let i = 0; i < latitudes.length; i++) {
-     const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitudes[i]}&longitude=${longitudes[i]}&hourly=temperature_2m,relativehumidity_2m,rain,snowfall,visibility,windspeed_10m`;
-      const res = await fetch(apiUrl);
-      const data = await res.json();
-  
-     weatherData.push(data);
-    }
-  
-    return weatherData;
-   }
-  
-  const latitudes = [];
-  const longitudes = [];
-  
-   getWeatherData(latitudes, longitudes).then((weatherData) => {
-    console.log(weatherData);
-    showCurrentTemp()
-
-   });
-=======
 //Den delen försöker ge hög platsnoggrannhet
   const options = {
     enableHighAccuracy: true
@@ -31,7 +7,6 @@
     const successCallback = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
->>>>>>> main
 
     let printCity = document.getElementById("showCurrentCity");
     let windSpeed = document.getElementById("windSpeed");
@@ -107,13 +82,6 @@
  let weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
  let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-<<<<<<< HEAD
- //Get day, month and date
- let today = new Date();
- let day = today.getDay();
- let month = today.getMonth();
- let date = today.getDate();
-=======
 //Get day, month and date
 let today = new Date();
 let year = today.getFullYear()
@@ -126,7 +94,6 @@ let timeString = `${year}-0${month}-${date}T${hour}:00`;
 
 
 
->>>>>>> main
 
  let monthIs = months[month];
  let todayIs= weekDays[day];
@@ -188,7 +155,7 @@ let timeString = `${year}-0${month}-${date}T${hour}:00`;
   
   function convertToF() {
      const temperatureSpan = document.getElementById("temp-span");
-    const celsius = parseFloat(temperatureSpan.textContent);
+     const celsius = parseFloat(temperatureSpan.textContent);
      const fahrenheit = (celsius * 9/5) + 32;
      temperatureSpan.textContent = fahrenheit.toFixed(2) + "°F";
    }
