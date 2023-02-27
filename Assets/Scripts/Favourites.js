@@ -35,12 +35,6 @@ function showFavouriteCity(list) {
 
     const a = document.querySelectorAll("a");
 
-    // a.forEach(link => {
-    //     link.addEventListener('click', function(event) {
-    //         console.log(event.target.dataset.index)
-    //         printResults(list[event.target.dataset.index]);
-    //     })
-    // })
 
     a.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -134,3 +128,24 @@ function showFavouriteCity(list) {
     } 
 
     showFavouriteCity(storedfavourites);
+
+
+    //-------------Ändra bakgrund beroende på WMO kod----------------
+
+    function changeBackground(){
+        let backgroundWMO = localStorage.getItem("background");
+        let body = document.querySelector("body")
+        if(backgroundWMO == "cloudy"){
+            body.style.backgroundImage = 'url("Assets/Pictures/tobias-stonjeck-e_ZxKz3_2Nc-unsplash.jpg")'
+        } else if(backgroundWMO == "sunny") {
+            body.style.backgroundImage = 'url("Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg")';
+        } else if (backgroundWMO == "rainy"){
+            body.style.backgroundImage = 'url("Assets/Pictures/frame-harirak-5Q5jtb1SEVo-unsplash.jpg")';
+        } else if (backgroundWMO == "thunder"){
+            body.style.backgroundImage = 'url("Assets/Pictures/Rainy-day-picture.jpg")';
+        } else if (backgroundWMO == "snowy"){
+            body.style.backgroundImage = 'url("Assets/Pictures/gabriel-alenius-USXfF_ONUGo-unsplash.jpg")';
+        }
+    }
+
+    changeBackground()

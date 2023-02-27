@@ -7,28 +7,33 @@
     <title>Favourites</title>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2f1b119233.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Assets/CSS/style.css">
     <link rel="stylesheet" href="/Assets/CSS/backarrow.css">
     <link rel="stylesheet" href="Assets/CSS/favorite.css">
 </head>
 <body>
    
-        <header class="favourites-header">
-            <div class="backarrow">
-                <button onclick="window.history.back()" class="arr left"><i class="fa-solid fa-arrow-left"></i></button>
-            </div>
-        </header>
-    
-        <main>
-            <div class="header">
-                <p>favoriter</p>
-            </div>
-       
+    <header class="settings-header">
+            
+        <div class="backarrow-settings">
+            <button onclick="window.history.back()" class="arr left"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
 
-            <!-- Behövs denna ?  <span class="star-icon" onclick="toggleStar(this)"></span> -->
-            <div class="kort">
-                <h1 class="favoriter"></h1>
-            </div> 
+        <div class="header-img">
+        <img src="/Assets/Pictures/Logo.png" alt="">
+
+        <h2>Favourites</h2>
+        </div>
+
+    </header>
+        <main>
+            <ul class="favoriter">
+                
+            </ul>
+            <span class="star-icon" onclick="toggleStar(this)"></span>
         </main>
         <footer class="footer">
             <div class="footer__wrapper">
