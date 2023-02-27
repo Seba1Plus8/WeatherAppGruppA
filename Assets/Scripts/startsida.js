@@ -78,27 +78,33 @@
         let rainyWeatherCode = [61, 63, 65, 51, 53, 55, 80, 81, 82];
         let ThunderWeatherCode = [95, 96, 99];
         
+      
         
         if (sunnyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Perfekt väder för att ta en öl i solen, glöm inte solglasögonen!";
             weatherIcon.src="/Assets/Pictures/sun_icon.png";
             body.style.backgroundImage = 'url("Assets/Pictures/chuttersnap-TSgwbumanuE-unsplash.jpg")';
+            localStorage.setItem("background", "sunny");
           } else if (snowyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Kallt ute! Räkna med att frysa om inte du har varma kläder!";
             weatherIcon.src="/Assets/Pictures/snow_icon.png";
             body.style.backgroundImage = 'url("Assets/Pictures/gabriel-alenius-USXfF_ONUGo-unsplash.jpg")';
+            localStorage.setItem("background", "snowy");
           } else if (rainyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Det regnar ute, ta med ett paraply!";
             weatherIcon.src="/Assets/Pictures/rain_icon.png";
             body.style.backgroundImage = 'url("Assets/Pictures/frame-harirak-5Q5jtb1SEVo-unsplash.jpg")';
+            localStorage.setItem("background", "rainy");
           } else if (ThunderWeatherCode.includes(WMO)) {
             funnyText.innerText = "Håll dig inomhus, åskar!!";
             weatherIcon.src="/Assets/Pictures/rain_icon.png";
             body.style.backgroundImage = 'url("Assets/Pictures/Rainy-day-picture.jpg")';
+            localStorage.setItem("background", "thunder");
           } else if (CloudyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Lite molnigt, kunde varit värre!";
             weatherIcon.src="/Assets/Pictures/clod_icon.png";
             body.style.backgroundImage = 'url("Assets/Pictures/tobias-stonjeck-e_ZxKz3_2Nc-unsplash.jpg")';
+            localStorage.setItem("background", "cloudy");
           } else {
             funnyText.innerText = "Vädret är opålitiligt!"
           }
@@ -214,7 +220,6 @@ function convertToC() {
      function toggleStar(star) {
          star.classList.toggle('marked');
      }
-     
      
 
  
