@@ -45,7 +45,7 @@
 
         index = hours.indexOf(`${year}-0${month}-${date}T${hour}:00`)
         console.log(index);
-        console.log(`${year}-0${month}-${date}T${hour}:00`);
+        console.log(`${year}-0${month}-${date}T${hour}:00`); 
         
 
         wind = windSpeedArr.at(index);
