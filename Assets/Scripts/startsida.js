@@ -125,12 +125,12 @@
 
   
 
-  //Set current Time, date, month 
-let currentDay= document.getElementById("day");
-let currentTime= document.getElementById("time");
+   //Set current Time, date, month 
+ let currentDay= document.getElementById("day");
+ let currentTime= document.getElementById("time");
 
-let weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+ let weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+ let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 //Get day, month and date
 let today = new Date();
@@ -149,17 +149,17 @@ console.log(timeString);
 
 
 
-let monthIs = months[month];
-let todayIs= weekDays[day];
-currentDay.innerHTML=todayIs+', '+ date+' '+monthIs;
+ let monthIs = months[month];
+ let todayIs= weekDays[day];
+// currentDay.innerHTML=todayIs+', '+ date+' '+monthIs;
 
 
 
-//Get exact time
-setInterval(() => {
+ //Get exact time
+ setInterval(() => {
 
     let dayTime = new Date();
-    let hours = dayTime.getHours();
+     let hours = dayTime.getHours();
     let minutes = dayTime.getMinutes();
     let hour, minute;
 
@@ -168,56 +168,55 @@ setInterval(() => {
     }
     else {
         hour=hours;
-    }
+     }
 
-    if (minutes<10){
-        minute= "0"+ minutes;
-    }
-    else {
-        minute=minutes;
-    }
+     if (minutes<10){
+         minute= "0"+ minutes;
+     }
+     else {
+         minute=minutes;
+     }
 
     let showTime = hour+":"+minute;
 
-    currentTime.innerHTML=showTime;
+     currentTime.innerHTML=showTime;
 
-//Att få Json tid data
-    let data = {
+ //Att få Json tid data
+     let data = {
         "time": showTime,
-        "dayTime": dayTime
+         "dayTime": dayTime
     };
 
-    let jsonData = JSON.stringify(data);
+     let jsonData = JSON.stringify(data);
+     //console.log(jsonData);
 
-    //console.log(jsonData);
-
-}, 1000); 
+ }, 1000); 
 
 
 /* -------- Temperature converter --------- */ 
 
-function showCurrentTemp() {
-    const tempUnit = localStorage.getItem("tempUnit")
-    if (tempUnit === 'fahrenheit') {
-        convertToF();
- }
-}
-function convertToC() {
-    const temperatureSpan = document.getElementById("temp-span");
-    const fahrenheit = parseFloat(temperatureSpan.textContent);
-    const celsius = (fahrenheit - 32) * 5/9;
-    temperatureSpan.textContent = celsius.toFixed(2) + "°C";
+ function showCurrentTemp() {
+     const tempUnit = localStorage.getItem("tempUnit")
+     if (tempUnit === 'fahrenheit') {
+         convertToF();
   }
+ }
+ function convertToC() {
+     const temperatureSpan = document.getElementById("temp-span");
+     const fahrenheit = parseFloat(temperatureSpan.textContent);
+     const celsius = (fahrenheit - 32) * 5/9;
+     temperatureSpan.textContent = celsius.toFixed(2) + "°C";
+   }
   
   function convertToF() {
-    const temperatureSpan = document.getElementById("temp-span");
-    const celsius = parseFloat(temperatureSpan.textContent);
-    const fahrenheit = (celsius * 9/5) + 32;
-    temperatureSpan.textContent = fahrenheit.toFixed(2) + "°F";
-  }
+     const temperatureSpan = document.getElementById("temp-span");
+     const celsius = parseFloat(temperatureSpan.textContent);
+     const fahrenheit = (celsius * 9/5) + 32;
+     temperatureSpan.textContent = fahrenheit.toFixed(2) + "°F";
+   }
 
      
-     function toggleStar(star) {
+      function toggleStar(star) {
          star.classList.toggle('marked');
      }
      

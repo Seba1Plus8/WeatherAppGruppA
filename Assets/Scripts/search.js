@@ -65,6 +65,8 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
         const h1 = document.createElement("h1");
         h1.innerText = `${Math.round(temp)}` 
         box.append(h1)
+
+        
     }
     //----------------Detta är funktionerna när man lägger till i sparade städer och tar bort från sparade städer
     function updateStar(checkbox, item) {
