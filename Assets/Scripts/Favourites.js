@@ -76,6 +76,7 @@ function showFavouriteCity(list) {
             const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.latitude}&longitude=${result.longitude}&hourly=temperature_2m,relativehumidity_2m,surface_pressure,apparent_temperature,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Europe%2FBerlin`);
             const data = await res.json();
             console.log(data);
+
             
             
             let hours = [];
@@ -97,26 +98,66 @@ function showFavouriteCity(list) {
             precipitation = precipitations.at(index)
 
             
-            const h1 = document.createElement("h1");
+  /*           const h1 = document.createElement("h1");
             h1.innerHTML = `${Math.round(temp)}°C` 
-            ul.append(h1)
+            main.append(h1)
 
             const h2 = document.createElement("h2");
             h2.innerHTML = `Wind Speed <br>${Math.round(wind) + "m/s"}`
-            ul.append(h2)
+            main.append(h2)
 
             
             const h4 = document.createElement("h2");
             h4.innerHTML = `Precipitation<br>${Math.round(precipitation)}mm`
-            ul.append(h4)
+            main.append(h4)
 
             const humidityPrint = document.createElement("h2");
             humidityPrint.innerHTML = `Humidity<br>${Math.round(humidityValue)}%`
-            ul.append(humidityPrint);
+            main.append(humidityPrint);
 
             const pressurePrint = document.createElement("h2");
             pressurePrint.innerHTML = `Pressure<br>${Math.round(pressureSurface)}%`
-            ul.append(pressurePrint);
+            main.append(pressurePrint); */
+
+
+
+            const htmlString = `
+                <div class="extra-info-container">
+                    <i id="info-close" class="fa-regular fa-circle-xmark"></i>
+                    
+                <div class="currentTemp"><h1 id="h1-temp">Temperature<br>${Math.round(temp)}°C</h1></div>
+
+                    <div class="extra-weather-info-fav">
+                        
+                        <h2 id="h2-wind">Wind Speed <br>${Math.round(wind)}m/s</h2>
+                        <h2 id="h2-precipitation">Precipitation<br>${Math.round(precipitation)}mm</h2>
+                        <h2 id="h2-humidity">Humidity<br>${Math.round(humidityValue)}%</h2>
+                        <h2 id="h2-pressure">Pressure<br>${Math.round(pressureSurface)}%</h2>
+
+                    </div>
+                </div>
+                `;
+
+            const section = document.querySelector(".info-section");
+            section.innerHTML = htmlString;
+
+            const backButton = document.querySelector('#info-close');
+
+           
+            backButton.addEventListener('click', () => {
+
+          
+              const extraInfoContainer = document.querySelector('.extra-info-container');
+              extraInfoContainer.style.display = 'none';
+            });
+
+
+            const extraInfoContainer = document.querySelector('.extra-info-container');
+
+           
+            extraInfoContainer.style.display = 'block';
+
+
 
 
 
