@@ -1,27 +1,60 @@
-body 
-{
-     margin: 0;
-     padding: 0;
-     font-family: 'Poppins', sans-serif;
-     
-}
 
-h2{
-    font-weight: 200;
-}
+  .search-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #search-form {
+    position: relative;
+  }
 
+  #search-label {
+    position:absolute;
+    right: 8%;
+    top: 48%;
+    width: 25px;
+    height: auto;
+    color: #fafafa;
+  }
+  
+  #search-input {
+    width: 380px;
+    height: 60px;
+    border-radius: 25px;
+    background-color: rgba(59, 57, 61, 0.34);
+    border: 4px solid rgba(255, 255, 255, 0.4);
+  }
+  
+  input::placeholder {
+    color: rgb(205, 205, 205);
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding-top: 20px;
+  }
+
+.star-icon {
+  padding-right: 5%;
+}
 
 .box
 {
-    position: absolute;
-    left: 64%;
-    top: 4%;
+    display: flex;
+    flex-direction: column;
     transform: translate(-50%);
-    width: 300px;
 }
 
-input
-{
+.box a {
+    color: white;
+  }
+
+input {
     position: relative;
     display: inline-block;
     font-size: 20px;
@@ -32,6 +65,7 @@ input
 input[type="text"]
 {
     background: #fff;
+    color: white;
     width: 200px;
     height: 40px;
     border: none;
@@ -53,17 +87,15 @@ input[type="submit"]
     color: #fff;
 }
 
-
-
 input[type="submit"]:hover 
 {
     background: #5a5a5a;
 }
-/* 
+
 input[type="submit"]::after
 {
     content: "\f002";
     font-family: "Font Awesome 6 Free";
     font-size: 2rem;
     display: block;
-} */
+}

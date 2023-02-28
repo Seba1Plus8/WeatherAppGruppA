@@ -1,24 +1,24 @@
 .wrapper {
     width: 100vw;
+    min-height: 100vh;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
-body{
+body {
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     width: 100%;
-    background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.55)), url(/Assets/Pictures/frame-harirak-5Q5jtb1SEVo-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     color: white;
   }
 
-.dark-mode {
-  background-image:linear-gradient(rgba(47, 46, 46, 0.5), rgba(0, 0, 0, 0.9)), url(/Assets/Pictures/frame-harirak-5Q5jtb1SEVo-unsplash.jpg);
+.dark-mode .wrapper {
+  background:linear-gradient(rgba(47, 46, 46, 0.5), rgba(0, 0, 0, 0.521));
 }
 
  .header-cont {
@@ -119,37 +119,6 @@ body{
   font-weight: 200;
 }
 
-.footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 4em;
-    border-radius: 15px 15px 0 0;
-    background: rgba(243, 232, 255, 0.4);
-    backdrop-filter: blur(2px);
-}
-
-.footer__wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height:inherit;
-}
-
-.footer__wrapper > a, a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-/* ----Footer for settings page---- */
-.settings-footer {
-  width: 100%;
-  height: 4em;
-  border-radius: 15px 15px 0 0;
-  background: rgba(243, 232, 255, 0.4);
-  backdrop-filter: blur(2px);
-}
 /* ------------Style for settings page------------*/
 
 .all-toggles {
@@ -168,13 +137,13 @@ body{
 
 h2 {
     font-size: 25px;
-    font-weight: 200;
 }
 
 #tempatureUnit {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 10px;
 }
 
 .radio-toggle {
@@ -191,15 +160,18 @@ h2 {
 }
 
 .AboutApp {
-  font-weight: 300;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.about {
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
 .AboutTxt {
-  font-weight: 100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -350,9 +322,8 @@ span.star-icon{
     font-weight: 900;
 }
 
-
   /* ---- styling search ---*/
-  
+/*   
   .search-main {
     display: flex;
     flex-direction: column;
@@ -393,9 +364,42 @@ span.star-icon{
   ul {
     padding-top: 20px;
     padding-left: 0px;
-  }
+  } */
 
+/* ---- FOOTER ---*/
+  .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 4em;
+    border-radius: 15px 15px 0 0;
+    background: rgba(243, 232, 255, 0.4);
+    backdrop-filter: blur(2px);
+}
 
+.footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:inherit;
+}
+
+.footer__wrapper > a, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+<<<<<<< HEAD
+.settings-footer {
+  width: 100%;
+  height: 4em;
+  border-radius: 15px 15px 0 0;
+  background: rgba(243, 232, 255, 0.4);
+  backdrop-filter: blur(2px);
+}
+=======
 
 
  
+>>>>>>> main
