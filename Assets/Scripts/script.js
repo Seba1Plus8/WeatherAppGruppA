@@ -15,6 +15,7 @@ if (tempUnit === "fahrenheit") {
 } else {
     document.querySelector('input[value="celsius"]').checked = true;
 }
+}
 
 
 /* -------- Temperature converter --------- */ 
@@ -85,4 +86,3 @@ function changeBackground(){
 }
 
 changeBackground()
-}
