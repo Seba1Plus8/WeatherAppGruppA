@@ -123,7 +123,7 @@ function showFavouriteCity(list) {
 
             const htmlString = `
                 <div class="extra-info-container">
-                <button><i class="fa-solid fa-arrow-left"></i></button>
+                    <i id="info-close" class="fa-regular fa-circle-xmark"></i>
                     
                 <div class="currentTemp"><h1 id="h1-temp">Temperature<br>${Math.round(temp)}°C</h1></div>
 
@@ -138,16 +138,15 @@ function showFavouriteCity(list) {
                 </div>
                 `;
 
-            const section = document.getElementById("main-favourites");
+            const section = document.querySelector(".info-section");
             section.innerHTML = htmlString;
 
+            const backButton = document.querySelector('#info-close');
 
-
-            const backButton = document.querySelector('.extra-info-container button');
-
-            // Add a click event listener to the button
+           
             backButton.addEventListener('click', () => {
-              // Hide the extra-info-container div
+
+          
               const extraInfoContainer = document.querySelector('.extra-info-container');
               extraInfoContainer.style.display = 'none';
             });
@@ -155,7 +154,7 @@ function showFavouriteCity(list) {
 
             const extraInfoContainer = document.querySelector('.extra-info-container');
 
-            // Show the extra-info-container div
+           
             extraInfoContainer.style.display = 'block';
 
 

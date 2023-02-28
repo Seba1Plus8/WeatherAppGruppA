@@ -1,5 +1,7 @@
 
-
+.favoriter{
+    padding: 0;
+}
 .favoriter li {
     background-color: rgba(59, 57, 61, 0.34);
     border: 4px solid rgba(255, 255, 255, 0.4);
@@ -7,6 +9,7 @@
     margin: 3px;
     padding: 10px;
     font-weight: 100;
+    list-style: none;
 }
 
 
@@ -74,6 +77,31 @@
     font-size: 12px;
     text-align: center;
   }
+
+  .info-section .extra-info-container {
+    position: relative;
+    border-radius: 15px;
+  }
+
+#info-close {
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+     cursor: pointer;
+}
+
+
+/* .extra-info-container {
+    position: relative;
+  }
+  
+  .fa-circle-xmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  } */
 
 
 
