@@ -6,6 +6,8 @@ if (tempUnit === "fahrenheit") {
   document.querySelector('input[value="fahrenheit"]').checked = true;
 } else if (tempUnit === "celsius") {
   document.querySelector('input[value="celsius"]').checked = true;
+} else {
+    document.querySelector('input[value="celsius"]').checked = true;
 }
 
 
