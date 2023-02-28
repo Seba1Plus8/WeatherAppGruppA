@@ -108,30 +108,6 @@ function showFavouriteCity(list) {
             const h4 = document.createElement("h2");
             h4.innerHTML = `${precipitation}`
             ul.append(h4)
-            
-
-            feels = data.hourly.apparent_temperature;
-            Math.round(temp);
-
-            for (let i = 0;i < 25; i++) {
-                const element = hours[i];
-                const li = document.createElement("li");
-                li.innerHTML = `
-                <div class="upper-Box">
-                <h2>${i.toLocaleString("se", {minimumIntegerDigits:2})}:00</h2> 
-                <h3>${Math.round(temps[i])}C</h3>
-                <h6>${Math.round(windspeed[i])}m/s</h6>
-                </div>
-                <div class="lower-Box">
-                <h6>${precipitations[i]}mm</h6>
-               <img src="/550c1520618de7f49b3ca4f8d92fcc4d.png" class="icon" alt="vädret">
-                <h6>${Math.round(feels[i])}C</h6>
-                </div>
-                ` 
-                ul.append(li);
-            }
-
-
         }
 
         
