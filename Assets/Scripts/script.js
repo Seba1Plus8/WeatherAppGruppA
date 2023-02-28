@@ -14,7 +14,10 @@ if (tempUnit === "fahrenheit") {
   document.querySelector('input[value="celsius"]').checked = true;
 } else {
     document.querySelector('input[value="celsius"]').checked = true;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> main
 }
 
 
@@ -86,3 +89,7 @@ function changeBackground(){
 }
 
 changeBackground()
+<<<<<<< HEAD
+=======
+}
+>>>>>>> main
