@@ -1,11 +1,13 @@
 /* -------- precheck radio buttons for temperature --------- */ 
 
 const tempUnit = localStorage.getItem("tempUnit");
+const celciusInp = document.querySelector('input[value="celsius"]')
+const fahrenheitInp = document.querySelector('input[value="fahrenheit"]')
 
-if (tempUnit === "fahrenheit") {
-  document.querySelector('input[value="fahrenheit"]').checked = true;
-} else if (tempUnit === "celsius") {
-  document.querySelector('input[value="celsius"]').checked = true;
+if (fahrenheitInp && tempUnit === "fahrenheit") {
+    fahrenheitInp.checked = true;
+} else if (celciusInp && tempUnit === "celsius") {
+    celciusInp.checked = true;
 }
 
 
@@ -47,9 +49,11 @@ function darkmode() {
     const wasDarkmode = localStorage.getItem('darkmode') === 'true';
     document.body.classList.toggle('dark-mode', wasDarkmode);
     const toggle = document.getElementById ('darkmode-toggle')
+    console.log(toggle)
     if (toggle && wasDarkmode) {
         toggle.setAttribute('checked', true);
     }
+    console.log(onload)
  }
 
 
