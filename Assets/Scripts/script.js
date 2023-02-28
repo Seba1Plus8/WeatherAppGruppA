@@ -4,19 +4,16 @@ const tempUnit = localStorage.getItem("tempUnit");
 const celciusInp = document.querySelector('input[value="celsius"]')
 const fahrenheitInp = document.querySelector('input[value="fahrenheit"]')
 
-<<<<<<< HEAD
 if (fahrenheitInp && tempUnit === "fahrenheit") {
     fahrenheitInp.checked = true;
 } else if (celciusInp && tempUnit === "celsius") {
     celciusInp.checked = true;
-=======
 if (tempUnit === "fahrenheit") {
   document.querySelector('input[value="fahrenheit"]').checked = true;
 } else if (tempUnit === "celsius") {
   document.querySelector('input[value="celsius"]').checked = true;
 } else {
     document.querySelector('input[value="celsius"]').checked = true;
->>>>>>> main
 }
 
 
@@ -88,3 +85,4 @@ function changeBackground(){
 }
 
 changeBackground()
+}
