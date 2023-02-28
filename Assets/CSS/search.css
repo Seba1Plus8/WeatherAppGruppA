@@ -45,9 +45,10 @@
 
 .box
 {
-    display: flex;
-    flex-direction: column;
-    transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .box a {
@@ -99,3 +100,10 @@ input[type="submit"]::after
     font-size: 2rem;
     display: block;
 }
+
+.search-item{
+  width: 300px;
+}
+
+
+
