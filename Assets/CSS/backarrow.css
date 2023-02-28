@@ -59,5 +59,26 @@ body
     color: white;
 }
 
+.extra-weather-info-fav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    
+  }
+
+  .currentTemp {
+    text-align: center;
+  }
+
+  #h1-temp{
+    font-weight: 200;
+  }
+
+  #h2-wind, #h2-precipitation, #h2-humidity, #h2-pressure{
+    font-size: 12px;
+    text-align: center;
+  }
+
 
 
