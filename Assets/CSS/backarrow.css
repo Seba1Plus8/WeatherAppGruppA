@@ -49,9 +49,15 @@ body
     box-shadow: 0 0 10px 10px rgba(119, 119, 119, 0.283);
 }
 
-a {
+ a {
     color: white;
     text-decoration: none;
     font-size: 20px;
+} 
+
+.favoriter li a {
+    color: white;
 }
+
+
 
