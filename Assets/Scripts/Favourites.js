@@ -1,9 +1,14 @@
-let date = new Date();
-const year = date.getFullYear()
-const month = date.getMonth() + 1;
-const day = date.getDate();
-const hour = date.getHours();
-const currentDate = `${year}-0${month}-${day} Time: ${hour}:00`;
+let today = new Date();
+let year = today.getFullYear()
+let day = today.getDay();
+let month = today.getMonth()+1;
+let date = today.getDate();
+let hour = today.getHours()
+
+if (date < 10) {
+  date = `0${date}`
+}
+  
 
 
 
