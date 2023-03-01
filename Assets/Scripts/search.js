@@ -27,13 +27,15 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
         if (input.value.length > 0) {
             ul.innerHTML = 
             `
-            <li class="search-item"><span class="star-icon"></span><a href="#">${data.results[0].name}, ${data.results[0].country}</a>
+            <li class="search-item"><span class="star-icon"></span><a href="#" id="searchResultLink">${data.results[0].name}, ${data.results[0].country}</a>
             </li>
             ` 
         }
         
         favorit = document.querySelector(".star-icon");
-        const a = document.querySelector("a");
+        const a = document.querySelector("#searchResultLink");
+
+        console.log(a)
         
         if (favorit != undefined) {
             favorit.addEventListener("click", function() {
@@ -70,6 +72,8 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
             temp = temps.at(index);
             wind = windspeed.at(index)
             precipitation = precipitations.at(index)
+
+            console.log(index);
 
 
 
