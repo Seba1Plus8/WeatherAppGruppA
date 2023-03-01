@@ -2,6 +2,7 @@
 const input = document.querySelector("#search-input");
 const ul = document.querySelector("#search-results");
 const box = document.querySelector(".box")
+
 //------------detta är för att hitta temperaturen för staden------------
 let date = new Date();
 const year = date.getFullYear()
@@ -22,7 +23,7 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
     async function updateValue() {
         const res = await fetch("https://geocoding-api.open-meteo.com/v1/search?name=" + input.value);
         var data = await res.json();
-        
+
         //-------------------detta skriver ut resultatet från sök
         if (input.value.length > 0) {
             ul.innerHTML = 
