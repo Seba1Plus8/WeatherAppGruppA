@@ -77,8 +77,6 @@ function showFavouriteCity(list) {
             const data = await res.json();
             console.log(data);
 
-            
-            
             let hours = [];
             let pressureArr = [];
             let humidityArr = [];
@@ -92,10 +90,12 @@ function showFavouriteCity(list) {
 
             pressureSurface = pressureArr.at(index);
             humidityValue = humidityArr.at(index);
-            index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
+            index = hours.indexOf(`${year}-0${month}-${date}T${hour}:00`)
             temp = temps.at(index);
             wind = windspeed.at(index)
             precipitation = precipitations.at(index)
+
+            console.log(index);
 
 
             const htmlString = `
