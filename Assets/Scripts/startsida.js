@@ -88,7 +88,7 @@
           } else if (snowyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Kallt ute! Räkna med att frysa om inte du har varma kläder!";
             weatherIcon.src="/Assets/Pictures/snow_icon.png";
-            body.style.backgroundImage = 'url("Assets/Pictures/gabriel-alenius-USXfF_ONUGo-unsplash.jpg")';
+            body.style.backgroundImage = 'url("Assets/Pictures/Snow_20_fill.png")';
             localStorage.setItem("background", "snowy");
           } else if (rainyWeatherCode.includes(WMO)) {
             funnyText.innerText = "Det regnar ute, ta med ett paraply!";

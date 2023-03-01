@@ -34,7 +34,7 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
         } else if (backgroundWMO == "thunder"){
             body.style.backgroundImage = 'url("Assets/Pictures/Rainy-day-picture.jpg")';
         } else if (backgroundWMO == "snowy"){
-            body.style.backgroundImage = 'url("Assets/Pictures/gabriel-alenius-USXfF_ONUGo-unsplash.jpg")';
+            body.style.backgroundImage = 'url("Assets/Pictures/Snow_20_fill.png")';
         }
     }
 
