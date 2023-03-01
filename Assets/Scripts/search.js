@@ -34,8 +34,6 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
         
         favorit = document.querySelector(".star-icon");
         const a = document.querySelector("#searchResultLink");
-
-        console.log(a)
         
         if (favorit != undefined) {
             favorit.addEventListener("click", function() {
@@ -54,6 +52,18 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
     async function printResults(result) {
         const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.latitude}&longitude=${result.longitude}&hourly=temperature_2m,relativehumidity_2m,surface_pressure,apparent_temperature,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Europe%2FBerlin`);
         const data = await res.json();
+
+        let today = new Date();
+        let year = today.getFullYear()
+        let day = today.getDay();
+        let month = today.getMonth()+1;
+        let date = today.getDate();
+        let hour = today.getHours()
+
+        if (date < 10) {
+        date = `0${date}`
+        }
+  
         
         let hours = [];
             let pressureArr = [];
@@ -68,7 +78,7 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
 
             pressureSurface = pressureArr.at(index);
             humidityValue = humidityArr.at(index);
-            index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
+            index = hours.indexOf(`${year}-0${month}-${date}T${hour}:00`)
             temp = temps.at(index);
             wind = windspeed.at(index)
             precipitation = precipitations.at(index)
@@ -93,6 +103,9 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
                     </div>
                 </div>
                 `;
+
+
+//DIV för väder information + event listener för close div 
 
             const section = document.querySelector(".info-section");
             section.innerHTML = htmlString;
