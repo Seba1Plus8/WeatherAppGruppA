@@ -43,15 +43,22 @@
         pressureArr = data.hourly.surface_pressure;
         humidityArr = data.hourly.relativehumidity_2m;
 
-        index = hours.indexOf(`${year}-0${month}-${date}T${hour}:00`)
-        console.log(index);
-        console.log(`${year}-0${month}-${date}T${hour}:00`); 
+        console.log(date)
+
+        console.log()
+
+        index = hours.indexOf(`${year}-0${month}-${date}T${hour}:00`);
+      
         
 
         wind = windSpeedArr.at(index);
         pressureSurface = pressureArr.at(index);
         humidityValue = humidityArr.at(index);
         temp = tempArr.at(index);
+
+        console.log(tempArr);
+        console.log(index);
+        
         
         
         temperature.innerHTML=`${Math.round(temp)}`+"°C";
@@ -140,14 +147,9 @@ let month = today.getMonth()+1;
 let date = today.getDate();
 let hour = today.getHours()
 
-
-
-let timeString = `${year}-0${month}-${date}T${hour}:00`;
-
-console.log(timeString);
-
-
-
+if (date < 10) {
+  date = `0${date}`
+}
 
  let monthIs = months[month];
  let todayIs= weekDays[day];

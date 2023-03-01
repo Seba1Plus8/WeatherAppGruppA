@@ -1,9 +1,14 @@
-let date = new Date();
-const year = date.getFullYear()
-const month = date.getMonth() + 1;
-const day = date.getDate();
-const hour = date.getHours();
-const currentDate = `${year}-0${month}-${day} Time: ${hour}:00`;
+let today = new Date();
+let year = today.getFullYear()
+let day = today.getDay();
+let month = today.getMonth()+1;
+let date = today.getDate();
+let hour = today.getHours()
+
+if (date < 10) {
+  date = `0${date}`
+}
+  
 
 
 
@@ -77,8 +82,6 @@ function showFavouriteCity(list) {
             const data = await res.json();
             console.log(data);
 
-            
-            
             let hours = [];
             let pressureArr = [];
             let humidityArr = [];
@@ -92,10 +95,12 @@ function showFavouriteCity(list) {
 
             pressureSurface = pressureArr.at(index);
             humidityValue = humidityArr.at(index);
-            index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
+            index = hours.indexOf(`${year}-0${month}-${date}T${hour}:00`)
             temp = temps.at(index);
             wind = windspeed.at(index)
             precipitation = precipitations.at(index)
+
+            console.log(index);
 
 
             const htmlString = `
