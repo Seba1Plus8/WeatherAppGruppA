@@ -97,29 +97,6 @@ function showFavouriteCity(list) {
             wind = windspeed.at(index)
             precipitation = precipitations.at(index)
 
-            
-  /*           const h1 = document.createElement("h1");
-            h1.innerHTML = `${Math.round(temp)}°C` 
-            main.append(h1)
-
-            const h2 = document.createElement("h2");
-            h2.innerHTML = `Wind Speed <br>${Math.round(wind) + "m/s"}`
-            main.append(h2)
-
-            
-            const h4 = document.createElement("h2");
-            h4.innerHTML = `Precipitation<br>${Math.round(precipitation)}mm`
-            main.append(h4)
-
-            const humidityPrint = document.createElement("h2");
-            humidityPrint.innerHTML = `Humidity<br>${Math.round(humidityValue)}%`
-            main.append(humidityPrint);
-
-            const pressurePrint = document.createElement("h2");
-            pressurePrint.innerHTML = `Pressure<br>${Math.round(pressureSurface)}%`
-            main.append(pressurePrint); */
-
-
 
             const htmlString = `
                 <div class="extra-info-container">
@@ -156,16 +133,6 @@ function showFavouriteCity(list) {
 
            
             extraInfoContainer.style.display = 'block';
-
-
-
-
-
-
-
-            /* const h3 = document.createElement("h2");
-            h3.innerHTML = `${hour}:00`
-            ul.append(h3) */
         }
 
         

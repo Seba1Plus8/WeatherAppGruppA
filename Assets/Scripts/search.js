@@ -50,22 +50,65 @@ storedfavourites = JSON.parse(localStorage.getItem('favoriter'))
     
     //-------------här behöver vi koda så att det appendas som det gör på startsidan----------------
     async function printResults(result) {
-        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.latitude}&longitude=${result.longitude}&hourly=temperature_2m,apparent_temperature,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Europe%2FBerlin`);
+        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${result.latitude}&longitude=${result.longitude}&hourly=temperature_2m,relativehumidity_2m,surface_pressure,apparent_temperature,precipitation,windspeed_10m&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=Europe%2FBerlin`);
         const data = await res.json();
         
         let hours = [];
-        let index;
-        console.log(data)
-        hours = data.hourly.time;
-        temps = data.hourly.temperature_2m;
-        index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
-        temp = temps.at(index);
-        Math.round(temp);
-        
-        const h1 = document.createElement("h1");
-        h1.innerText = `${Math.round(temp)}` 
-        box.append(h1)
+            let pressureArr = [];
+            let humidityArr = [];
+            let index;
+            hours = data.hourly.time;
+            temps = data.hourly.temperature_2m;
+            windspeed = data.hourly.windspeed_10m;
+            precipitations = data.hourly.precipitation;
+            pressureArr = data.hourly.surface_pressure;
+            humidityArr = data.hourly.relativehumidity_2m;
 
+            pressureSurface = pressureArr.at(index);
+            humidityValue = humidityArr.at(index);
+            index = hours.indexOf(`${year}-0${month}-${day}T${hour}:00`)
+            temp = temps.at(index);
+            wind = windspeed.at(index)
+            precipitation = precipitations.at(index)
+
+
+
+            const htmlString = `
+                <div class="extra-info-container">
+                    <i id="info-close" class="fa-regular fa-circle-xmark"></i>
+                    
+                <div class="currentTemp"><h1 id="h1-temp">Temperature<br>${Math.round(temp)}°C</h1></div>
+
+                    <div class="extra-weather-info-fav">
+                        
+                        <h2 id="h2-wind">Wind Speed <br>${Math.round(wind)}m/s</h2>
+                        <h2 id="h2-precipitation">Precipitation<br>${Math.round(precipitation)}mm</h2>
+                        <h2 id="h2-humidity">Humidity<br>${Math.round(humidityValue)}%</h2>
+                        <h2 id="h2-pressure">Pressure<br>${Math.round(pressureSurface)}%</h2>
+
+                    </div>
+                </div>
+                `;
+
+            const section = document.querySelector(".info-section");
+            section.innerHTML = htmlString;
+
+
+            const backButton = document.querySelector('#info-close');
+
+           
+            backButton.addEventListener('click', () => {
+
+          
+              const extraInfoContainer = document.querySelector('.extra-info-container');
+              extraInfoContainer.style.display = 'none';
+            });
+
+
+            const extraInfoContainer = document.querySelector('.extra-info-container');
+
+           
+            extraInfoContainer.style.display = 'block';
         
     }
     //----------------Detta är funktionerna när man lägger till i sparade städer och tar bort från sparade städer
