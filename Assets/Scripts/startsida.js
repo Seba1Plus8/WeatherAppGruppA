@@ -151,8 +151,6 @@ console.log(timeString);
 
  let monthIs = months[month];
  let todayIs= weekDays[day];
-// currentDay.innerHTML=todayIs+', '+ date+' '+monthIs;
-
 
 
  //Get exact time
